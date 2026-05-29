@@ -316,9 +316,14 @@ footer{
     <h2>✨ Confirmar Presença</h2>
 
     <form
-        action="https://formsubmit.co/shining.souza97@gmail.com"
+        name="confirmacao"
         method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
     >
+
+        <input type="hidden" name="form-name" value="confirmacao">
+        <p style="display:none"><label>Não preencha: <input name="bot-field"></label></p>
 
         <input
             class="put"
@@ -348,18 +353,6 @@ footer{
         >
 
         <br>
-
-        <input
-            type="hidden"
-            name="_subject"
-            value="Nova confirmação de presença 🎂"
-        >
-
-        <input
-            type="hidden"
-            name="_captcha"
-            value="false"
-        >
 
         <button class="confirmar" type="submit">
             Confirmar
